@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="root"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.dominik.controller.MainController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Pretraživanje">
+                    <MenuItem text="Hoteli" onAction="#openHotels"/>
+                    <MenuItem text="Gosti" onAction="#openGuests"/>
+                    <MenuItem text="Rezervacije" onAction="#openReservations"/>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <Label text="Odaberi ekran iz izbornika."/>
+    </center>
+
+</BorderPane>

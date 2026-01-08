@@ -1,0 +1,22 @@
+<configuration>
+
+    <!-- Definiraj varijablu LOG_PATH, default "logs" -->
+    <property name="LOG_PATH" value="${LOG_PATH:-logs}" />
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- Putanja fleksibilna: koristi LOG_PATH -->
+        <file>${LOG_PATH}/pogreske.log</file>
+        <append>true</append>
+
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} %msg%n[%file:%line]</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Ispis samo u datoteku -->
+    <root level="debug">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
+

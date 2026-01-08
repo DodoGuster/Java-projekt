@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.dominik.controller.ReservationsController">
+
+    <HBox spacing="10">
+        <Label text="Hotel:"/>
+        <TextField fx:id="hotelField" promptText="npr. President"/>
+
+        <Label text="Email gosta:"/>
+        <TextField fx:id="guestEmailField" promptText="npr. ime@gmail.com"/>
+
+        <Label text="Datum od:"/>
+        <DatePicker fx:id="fromDate"/>
+
+        <Label text="do:"/>
+        <DatePicker fx:id="toDate"/>
+
+        <Button text="Pretraži" onAction="#onSearch"/>
+        <Button text="Reset" onAction="#onReset"/>
+    </HBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="hotelCol" text="Hotel"/>
+            <TableColumn fx:id="roomCol" text="Soba"/>
+            <TableColumn fx:id="guestCol" text="Gost"/>
+            <TableColumn fx:id="startCol" text="Od"/>
+            <TableColumn fx:id="endCol" text="Do"/>
+        </columns>
+    </TableView>
+
+</VBox>
