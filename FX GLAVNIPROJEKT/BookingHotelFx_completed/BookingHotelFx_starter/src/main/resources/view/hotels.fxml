@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.dominik.controller.HotelsController">
+
+    <HBox spacing="10">
+        <Label text="Naziv:"/>
+        <TextField fx:id="nameField" promptText="npr. Hilton"/>
+
+        <Label text="Grad:"/>
+        <TextField fx:id="cityField" promptText="npr. Zagreb"/>
+
+        <Label text="Tip:"/>
+        <TextField fx:id="typeField" promptText="npr. LUXURY"/>
+
+        <Button text="Pretraži" onAction="#onSearch"/>
+        <Button text="Reset" onAction="#onReset"/>
+    </HBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameCol" text="Naziv"/>
+            <TableColumn fx:id="cityCol" text="Grad"/>
+            <TableColumn fx:id="typeCol" text="Tip"/>
+        </columns>
+    </TableView>
+
+</VBox>

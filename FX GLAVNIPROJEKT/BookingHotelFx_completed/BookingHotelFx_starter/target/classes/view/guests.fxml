@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.dominik.controller.GuestsController">
+
+    <HBox spacing="10">
+        <Label text="Ime:"/>
+        <TextField fx:id="nameField" promptText="npr. Robert"/>
+
+        <Label text="Prezime:"/>
+        <TextField fx:id="surnameField" promptText="npr. Tanjic"/>
+
+        <Label text="Email:"/>
+        <TextField fx:id="emailField" promptText="npr. ime@gmail.com"/>
+
+        <Label text="Dob od:"/>
+        <TextField fx:id="minAgeField" prefWidth="70" promptText="npr. 18"/>
+
+        <Label text="do:"/>
+        <TextField fx:id="maxAgeField" prefWidth="70" promptText="npr. 65"/>
+
+        <Button text="Pretraži" onAction="#onSearch"/>
+        <Button text="Reset" onAction="#onReset"/>
+    </HBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameCol" text="Ime"/>
+            <TableColumn fx:id="surnameCol" text="Prezime"/>
+            <TableColumn fx:id="emailCol" text="Email"/>
+            <TableColumn fx:id="ageCol" text="Dob"/>
+        </columns>
+    </TableView>
+
+</VBox>
